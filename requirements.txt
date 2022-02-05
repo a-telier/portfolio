@@ -1,0 +1,13 @@
+bcrypt==3.1.7
+click==7.1.2
+dnspython==2.0.0
+Flask==1.1.2
+Flask-Cache==0.13.1
+Flask-Materialize==0.2.4
+Flask-PyMongo==2.3.0
+itsdangerous==1.1.0
+numpy==1.19.1
+pandas==1.1.0
+pymongo==3.10.1
+pytz==2020.1
+Werkzeug==1.0.1
