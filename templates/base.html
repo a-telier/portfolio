@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!--Header-->
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=(device-width), initial-scale=1.0">
+    <title>{% block title %}A-telier Portfolio{% endblock %}</title>
+
+    <!--css libraries-->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+
+    <!-- google fonts -->
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Homemade+Apple&display=swap');
+    </style>
+
+    <!--javascript libraries-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/fec8644327.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    </script>
+
+</head>
+{% endblock %}
+    
+<!--Navigation menu-->
+
+{% block navbar %}
+{% endblock %}
+
+
+<!--Content-->
+<body>
+{% block body %}
+{% endblock %}
+</body>
+
+<footer class="page-footer pink darken-1">
+{% block footer %}
+<div class="a-telier center">made by l'A-telier</div>
+{% endblock %}
+</footer>
+
+</html>
