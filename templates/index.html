@@ -8,15 +8,17 @@
 {% block body %}
 <section id="landing-view" class="container-fluid">
     <div class="row">
+        <!-- Landing Image -->
         <img id="landing-img" 
-        class="fixed-top w-100" 
+        class="sticky-top w-100 position-absolute"
         src="{{ url_for('static', filename='img/5.png')}}"
-        style="z-index:-1;">
+        style="z-index:-1; height: 600px;">
+        <!-- Welcome text -->
         <div id="landing-text" 
         class="col-6 w-100 left-align white-text p-3 m-3
         align-middle 
         animate__animated animate__tada"
-        style="height: 600px;">
+        style="">
             <h5>Hi there! I'm Alex</h5>
             <h3 style="font-size:2em;">Digital Marketeer</h3>
             <h3 style="font-size:2em;">E-commerce Specialist</h3>
