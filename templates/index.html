@@ -6,11 +6,29 @@
 {% endblock %}
 
 {% block body %}
-<section class="container-fluid mt-5 pt5 d-block">
+<section id="landing-view" class="container-fluid">
     <div class="row">
-        <h1>This is the home page</h1>
-        <div class="col-12">
+        <img id="landing-img" 
+        class="fixed-top w-100" 
+        src="{{ url_for('static', filename='img/5.png')}}"
+        style="z-index:-1;">
+        <div id="landing-text" 
+        class="col-6 w-100 left-align white-text p-3 m-3
+        align-middle 
+        animate__animated animate__tada"
+        style="height: 600px;">
+            <h5>Hi there! I'm Alex</h5>
+            <h3 style="font-size:2em;">Digital Marketeer</h3>
+            <h3 style="font-size:2em;">E-commerce Specialist</h3>
+            <h1 style="font-size:3.5em;">Weekend Coder</h1>
+            <h3 style="font-size:2em;">Entrepreneur</h3>
+            <h5>/n You have stumbled upon my portfolio page 
+                where I document my coding projects.
+            </h5>
         </div>
     </div>
+</section>
+<section id="projects-teaser">
+    <h1>Proejcts Teaser</h1>
 </section>
 {% endblock body %}
