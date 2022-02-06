@@ -6,27 +6,28 @@
 {% endblock %}
 
 {% block body %}
-<section id="landing-view" class="container-fluid">
+<section id="" class="container-fluid" style="height:600px;">
     <div class="row">
         <!-- Landing Image -->
         <img id="landing-img" 
         class="sticky-top w-100 position-absolute"
         src="{{ url_for('static', filename='img/5.png')}}"
-        style="z-index:-1; height: 600px;">
+        style="height: 600px; position:absolute; background-size:cover; z-index:-1;">
         <!-- Welcome text -->
         <div id="landing-text" 
-        class="col-6 w-100 left-align white-text p-3 m-3
-        align-middle 
-        animate__animated animate__tada"
-        style="">
-            <h5>Hi there! I'm Alex</h5>
-            <h3 style="font-size:2em;">Digital Marketeer</h3>
-            <h3 style="font-size:2em;">E-commerce Specialist</h3>
-            <h1 style="font-size:3.5em;">Weekend Coder</h1>
-            <h3 style="font-size:2em;">Entrepreneur</h3>
-            <h5>/n You have stumbled upon my portfolio page 
-                where I document my coding projects.
-            </h5>
+        class="col-lg-6 col-sm-12 w-100 left-align mx-5 white-text p-1 m-1
+        animate__animated animate__fadeInLeft" 
+        style="height:600px;">
+            <div class="my-auto">
+                <h5>Hi there! I'm Alex</h5>
+                <h3 style="font-size:2em;">Digital Marketeer</h3>
+                <h3 style="font-size:2em;">E-commerce Specialist</h3>
+                <h1 style="font-size:3.5em;">Weekend Coder</h1>
+                <h3 style="font-size:2em;">Entrepreneur</h3>
+                <h5>\t You have stumbled upon my portfolio page 
+                    where I document my coding projects.
+                </h5>
+            </div>
         </div>
     </div>
 </section>

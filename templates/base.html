@@ -9,26 +9,48 @@
     <title>{% block title %}{% endblock %}A-telier Portfolio</title>
 
     <!--css libraries-->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
-    <!-- Animation library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% block corecss %}
+        <!-- Styling libraries -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Own CSS  -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
+        <!-- Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    {% endblock %}
 
+    {% block extra_css %}
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+        -moz-appearance: textfield;
+        }
+    </style>
+    {% endblock %}
+    
     <!--favicon-->
 
-    <!--javascript libraries-->
+    <!-- JS Libraries -->
     <script src="{{ url_for('static', filename='js/index.js')}}"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/fec8644327.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+       
 </head>
 {% endblock %}
     
@@ -45,10 +67,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link white-text" href="#">About </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link white-text" href="#">Work </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link white-text" href="#">Work </a>
-        </li>
         </ul>
     </div>
 </nav>
@@ -56,7 +78,7 @@
 
 
 <!--Content-->
-<body>
+<body class="w-100">
 {% block body %}
 {% endblock %}
 </body>
@@ -89,5 +111,29 @@
     </div>
     {% endblock %}
 </footer>
+
+{% block postloadjs %}
+<!-- every page will render this since under base.html -->
+<script type="text/javascript">
+    // navigation toggler
+    $(document).ready(function() {
+        $('.sidenav').sidenav();
+        $('.dropdown-trigger').dropdown({ hover: false });
+        $('select').formSelect();
+        $('.collapsible').collapsible();
+    });
+
+    // dropdown menu
+    // jQuery(document).ready(function($){
+    //     $(".button-collapse").sideNav({
+    //         menuWidth: 275
+    //     });
+    //     $('.collapsible').collapsible();
+    //     });
+
+    // toasts
+    $('.toast').toast('show');
+</script>
+{% endblock %}
 
 </html>
