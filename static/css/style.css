@@ -1,11 +1,17 @@
-#welcome{
-    height: 600px;
-    width: 100%;
-    overflow:hidden;
-    position: relative;
+body{
+    font-family: Lato;
+    display: block;
+}
+
+/* Navigation */
+.navbar{
+    opacity: 0.5;
 }
 .nav-link{
     font-size: 1.2em;
+    opacity: 1;
+}
+.nav-item a{
     opacity: 1;
 }
 .list-inline-item{
@@ -21,4 +27,23 @@
     background-color: rgba(0,0,0,0.5);
     z-index: 0 !important;
     display: none;
+}
+
+/* Landing Page */
+#welcome{
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#landing-img{
+    height: 500px;
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    z-index: -1 !important;
+}
+
+#landing-text{
 }
