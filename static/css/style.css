@@ -1,0 +1,24 @@
+#welcome{
+    height: 600px;
+    width: 100%;
+    overflow:hidden;
+    position: relative;
+}
+.nav-link{
+    font-size: 1.2em;
+    opacity: 1;
+}
+.list-inline-item{
+    font-size: 2em;
+}
+.sidenav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 120vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 0 !important;
+    display: none;
+}
