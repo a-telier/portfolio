@@ -10,7 +10,17 @@
     <div class="row">
         {% for project in projects %}
         <div class="col-12">
-            <h3>{{project.title}}</h3>
+            <div class="col-lg-6 col-sm-12">
+                {% if project.img_teaser != 0 %}
+                <img id="landing-img"
+                src="{{url_for('static', filename='img/jr-korpa-wzkv5p5CIRk-unsplash.jpg')}}">
+                {% endif %}
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h3>{{project.category}}</h3>
+                <h3>{{project.title}}</h3>
+                <h6><i class="fas fa-code"></i> {{project.languages|join(', ')}}</h6>
+            </div>
         </div>
         {% endfor %}
     </div>
