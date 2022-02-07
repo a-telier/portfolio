@@ -1,29 +1,33 @@
 import os
-from os import path
-
 from flask import Flask, render_template, redirect, request, url_for, session
 
-#   Mongo DB manipulation libraries
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 
-#   used in datepicker
+from os import path
+import bcrypt
+
 import datetime
 
-#   start an instance of Flask
+#############################################
+#    CONFIGURATION
+#############################################
+
 app = Flask(__name__)
 
 #   import env as config
 if path.exists("env.py"):
     import env
 
-#   configuration of Database
+#   configuration of database
 app.config['MONGO_URI'] = os.environ.get('MONGO_URI')
-app.config['MONGODB_NAME'] = os.environ.get('MONGODB_NAME')
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
-#   create an instance of PyMongo
 mongo = PyMongo(app)
+
+
+#############################################
+#    PAGES
+#############################################
 
 @app.route("/")
 @app.route('/home')
