@@ -27,8 +27,13 @@ mongo = PyMongo(app)
 
 @app.route("/")
 @app.route('/home')
-def index():
+def home():
     return render_template("index.html")
+
+@app.route('/work')
+def work():
+    return render_template("work.html",
+    projects=mongo.db.projects.find())
 
 # RUN in production by using
 # flask run --host=0.0.0.0
