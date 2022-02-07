@@ -6,13 +6,36 @@
 {% endblock %}
 
 {% block body %}
-<section class="container">
-
+<section id="" class="container-fluid fixed-top" 
+style="
+z-index:-1;
+height:300px;
+padding:0;">
+    <div class="row mx-auto my-auto w-100 h-100"
+    style="margin:0;">
+        <!-- Image -->
+        <img id=""
+        src="{{url_for('static', filename='img/4.jpg')}}" 
+        class="w-100"
+        style="
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1 !important;">
+        <!-- Text -->
+        <h1 class="text-center my-auto mx-auto"
+        style="">
+            Coding Projects
+        </h1>
+    </div>
+</section>
+<section class="container" style="z-index:-1;">
+<div style="height:20vw;"></div>
 {% for project in projects %}
 {% if loop.index % 2 != 0 %}
-<div class="row m-1 my-5 py-5 p-2 animate__animated animate__fadeInLeftBig">
+<div class="row bg-white m-1 my-5 p-2 animate__animated animate__fadeInLeftBig">
     <!-- Teaser Image LEFT -->
-    <div class="col-lg-6 mx-auto my-auto">
+    <div class="col-lg-6 py-2 mx-auto my-auto">
         {% if project.img_teaser != 0 %}
         <img id=""
         class="responsive-img my auto mx-auto p-1"
@@ -21,7 +44,7 @@
         {% endif %}
     </div>
     <!-- Teaser Text -->
-    <div class="col-lg-6 mx-auto my-auto">
+    <div class="col-lg-6 py-5 mx-auto my-auto grey lighten-4">
         <h6>Category | {{project.category}}</h6>
         <h3>{{project.title}}</h3>
         <p>
@@ -41,9 +64,9 @@
     <hr>
 </div>
 {% else %}
-<div class="row m-1 my-3 p-2 pt-3 animate__animated animate__fadeInRightBig">
+<div class="row bg-white m-1 my-5 p-2 pt-3 animate__animated animate__fadeInRightBig">
     <!-- Teaser Text -->
-    <div class="col-lg-6 mx-auto my-auto">
+    <div class="col-lg-6 py-5 mx-auto my-auto grey lighten-4">
         <h6>Category | {{project.category}}</h6>
         <h3>{{project.title}}</h3>
         <p>
@@ -62,7 +85,7 @@
     </div>
     <hr>
     <!-- Teaser Image RIGHT -->
-    <div class="col-lg-6 mx-auto my-auto">
+    <div class="col-lg-6 py-2 mx-auto my-auto">
         {% if project.img_teaser != 0 %}
         <img id=""
         class="responsive-img my auto mx-auto p-1"

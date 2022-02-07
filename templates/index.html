@@ -6,22 +6,32 @@
 {% endblock %}
 
 {% block body %}
-    <section id="welcome" class="container-fluid fixed-top" style="z-index:-1;">
-        <div class="row mx-auto my-auto w-100" style="height:inherit;">
+    <section class="container-fluid fixed-top w-100" 
+    style="
+    height: 800px;
+    z-index:-1;">
+        <div class="row mx-auto my-auto w-100" 
+        style="height:800px;">
             <!-- Image -->
-            <img id="landing-img"
-            src="{{url_for('static', filename='img/jr-korpa-wzkv5p5CIRk-unsplash.jpg')}}" 
-            class="fixed-top">
+            <img src="{{url_for('static', filename='img/4.jpg')}}" 
+            class="fixed-top"
+            style="
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1 !important;">
             <!-- Text -->
-            <div id="landing-text" 
-            class="col-8 mx-auto my-auto text-center animate__animated animate__fadeInLeft">
+            <div class="col-lg-6 col-sm-10 my-auto m-1 pb-5 
+            text-white align-left
+            animate__animated animate__fadeInLeft">
                 <h6>Hi, I'am Alex!</h6>
                 <h2>Digital Marketeer</h2>
                 <h3>E-commerce Specialist</h3>
                 <h1>Weekend Programmer</h1>
                 <hr>
                 <h6>
-                    Welcome to my portfolio site (we have been expecting you!) 
+                    Welcome to my portfolio site (we have been expecting you!)
                     - here I display my weekend projects & other techy things in the future who knows.
                 </h6>
             </div>
