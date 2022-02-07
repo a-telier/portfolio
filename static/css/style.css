@@ -4,8 +4,8 @@ body{
 }
 
 /* Navigation */
-.navbar{
-    opacity: 0.5;
+#navbar{
+    background-color: rgba(12, 1, 1, 0.5);
 }
 .nav-link{
     font-size: 1.2em;
@@ -31,14 +31,14 @@ body{
 
 /* Landing Page */
 #welcome{
-    height: 500px;
-    width: 100%;
+    height: 100vw;
+    width: 100vw;
     overflow: hidden;
     position: relative;
 }
 #landing-img{
-    height: 500px;
-    width:100%;
+    height: 100%;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -46,4 +46,5 @@ body{
 }
 
 #landing-text{
+
 }
