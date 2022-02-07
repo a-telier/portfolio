@@ -57,12 +57,11 @@
       position: absolute;
       z-index: 3;
   }
-  .nav-link{
+  .link{
       font-size: 1.2em;
-      opacity: 1;
   }
-  .nav-item a{
-      opacity: 1;
+  .link:hover{
+    color:rosybrown;
   }
   .list-inline-item{
       font-size: 2em;
@@ -86,18 +85,18 @@
   </a>
   
   <ul class="left hide-on-med-and-down">   
-    <li><a href="{{ url_for('home')}}">Home</a></li>
-    <li><a href="{{ url_for('work')}}">Work</a></li>
-    <li><a href="{{ url_for('about')}}"> About</a></li>
+    <li><a class="link px-5" href="{{ url_for('home')}}">Home</a></li>
+    <li><a class="link px-5" href="{{ url_for('work')}}">Projects Gallery</a></li>
+    <li><a class="link px-5" href="{{ url_for('about')}}"> About</a></li>
   </ul>
 </nav>
 
 <!--Mobile navigation menu-->
     <ul class="sidenav mt-3" id="mobile-links">
       <div class="container">
-          <li><a href="{{ url_for('home')}}">Home</a></li>
-          <li><a href="{{ url_for('work')}}">Work</a></li>
-          <li><a href="{{ url_for('about')}}"> About</a></li>
+          <li><a class="link" href="{{ url_for('home')}}">Home</a></li>
+          <li><a class="link" href="{{ url_for('work')}}">Projects Gallery</a></li>
+          <li><a class="link" href="{{ url_for('about')}}"> About</a></li>
           <hr>
       </div>
     </ul>
