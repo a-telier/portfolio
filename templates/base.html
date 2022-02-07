@@ -50,6 +50,33 @@
 <!--Navigation menu-->
 {% block navbar %}
 
+<style>
+  /* Navigation */
+  #navbar{
+      background-color: rgba(12, 1, 1, 0.5);
+  }
+  .nav-link{
+      font-size: 1.2em;
+      opacity: 1;
+  }
+  .nav-item a{
+      opacity: 1;
+  }
+  .list-inline-item{
+      font-size: 2em;
+  }
+  .sidenav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      height: 120vh;
+      background-color: rgba(0,0,0,0.5);
+      display: none;
+  }
+</style>
+
 <nav class="nav-wrapper" id="navbar">
   <a href="" class="brand-logo" id="logo" src=""></a>
   <a data-target="mobile-links" class="sidenav-trigger">
@@ -76,7 +103,7 @@
 
 
 <!--Content-->
-<body class="w-100 h-100">
+<body class="w-100">
 {% block body %}
 {% endblock %}
 </body>

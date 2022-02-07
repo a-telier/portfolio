@@ -1,39 +1,12 @@
 body{
     font-family: Lato;
-    display: block;
-}
-
-/* Navigation */
-#navbar{
-    background-color: rgba(12, 1, 1, 0.5);
-}
-.nav-link{
-    font-size: 1.2em;
-    opacity: 1;
-}
-.nav-item a{
-    opacity: 1;
-}
-.list-inline-item{
-    font-size: 2em;
-}
-.sidenav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    height: 120vh;
-    background-color: rgba(0,0,0,0.5);
-    display: none;
-}
+  }
 
 /* Landing Page */
 #welcome{
-    height: 100vw;
-    width: 100vw;
+    height: 50vw;
+    width: 100%;
     overflow: hidden;
-    position: relative;
 }
 #landing-img{
     height: 100%;
@@ -42,8 +15,4 @@ body{
     background-repeat: no-repeat;
 
     z-index: -1 !important;
-}
-
-#landing-text{
-
 }

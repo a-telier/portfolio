@@ -10,7 +10,7 @@
 
 {% for project in projects %}
 {% if loop.index % 2 != 0 %}
-<div class="row m-1 my-3 p-2 pt-3 animate__animated animate__fadeInLeftBig">
+<div class="row m-1 my-5 py-5 p-2 animate__animated animate__fadeInLeftBig">
     <!-- Teaser Image LEFT -->
     <div class="col-lg-6 mx-auto my-auto">
         {% if project.img_teaser != 0 %}
@@ -22,8 +22,8 @@
     </div>
     <!-- Teaser Text -->
     <div class="col-lg-6 mx-auto my-auto">
-        <h3>Category: {{project.category}}</h3>
-        <h3>Title: {{project.title}}</h3>
+        <h6>Category | {{project.category}}</h6>
+        <h3>{{project.title}}</h3>
         <p>
             {{project.description}}
             <!-- <a href="#"> Read more</a> -->
@@ -44,8 +44,8 @@
 <div class="row m-1 my-3 p-2 pt-3 animate__animated animate__fadeInRightBig">
     <!-- Teaser Text -->
     <div class="col-lg-6 mx-auto my-auto">
-        <h3>Category: {{project.category}}</h3>
-        <h3>Title: {{project.title}}</h3>
+        <h6>Category | {{project.category}}</h6>
+        <h3>{{project.title}}</h3>
         <p>
             {{project.description}}
             <!-- <a href="#"> Read more</a> -->

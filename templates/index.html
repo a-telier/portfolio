@@ -6,22 +6,25 @@
 {% endblock %}
 
 {% block body %}
-<div class="container-fluid fixed-top" style="z-index:-1;">
-    <section id="welcome" class="">
-        <div class="row valign-wrapper w-100" style="height:inherit;">
+    <section id="welcome" class="container-fluid fixed-top" style="z-index:-1;">
+        <div class="row mx-auto my-auto w-100" style="height:inherit;">
             <!-- Image -->
             <img id="landing-img"
             src="{{url_for('static', filename='img/jr-korpa-wzkv5p5CIRk-unsplash.jpg')}}" 
             class="fixed-top">
             <!-- Text -->
             <div id="landing-text" 
-            class="col-6 left-align mx-3 my-auto 
-            animate__animated animate__fadeInLeft">
-                <h1>Hello text</h1>
-                <h1>Hello text</h1>
-                <h1>Hello text</h1>
+            class="col-8 mx-auto my-auto text-center animate__animated animate__fadeInLeft">
+                <h6>Hi, I'am Alex!</h6>
+                <h2>Digital Marketeer</h2>
+                <h3>E-commerce Specialist</h3>
+                <h1>Weekend Programmer</h1>
+                <hr>
+                <h6>
+                    Welcome to my portfolio site (we have been expecting you!) 
+                    - here I display my weekend projects & other techy things in the future who knows.
+                </h6>
             </div>
         </div>
     </section>
-</div>
 {% endblock body %}
