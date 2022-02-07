@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+<h1>This is a single project page</h1>
+<h3>Category: {{project.category}}</h3>
+<h3>Title: {{project.title}}</h3>
+<h6><i class="fas fa-code"></i> Languages: {{project.languages|join(', ')}}</h6>
+<h6><i class="fas fa-tools"></i> Tools: {{project.tools|join(', ')}}</h6>
+{% endblock %}

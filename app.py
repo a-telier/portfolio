@@ -44,7 +44,8 @@ def work():
 def show_project(project_id):
     project = mongo.db.projects.find_one({"_id": ObjectId(project_id)})
     return render_template("project.html",
-    projects=mongo.db.projects.find())
+    projects=mongo.db.projects.find(),
+    project=project)
 
 @app.route('/about')
 def about():
