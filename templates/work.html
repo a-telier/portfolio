@@ -7,22 +7,37 @@
 
 {% block body %}
 <section class="container">
-    <div class="row">
-        {% for project in projects %}
-        <div class="col-12">
-            <div class="col-lg-6 col-sm-12">
-                {% if project.img_teaser != 0 %}
-                <img id="landing-img"
-                src="{{url_for('static', filename='img/jr-korpa-wzkv5p5CIRk-unsplash.jpg')}}">
-                {% endif %}
-            </div>
-            <div class="col-lg-6 col-sm-12">
-                <h3>{{project.category}}</h3>
-                <h3>{{project.title}}</h3>
-                <h6><i class="fas fa-code"></i> {{project.languages|join(', ')}}</h6>
-            </div>
-        </div>
-        {% endfor %}
+
+{% for project in projects %}
+<div class="row">
+    <div class="col-lg-6 mx-auto my-auto">
+        {% if project.img_teaser != 0 %}
+        <img id=""
+        class="responsive-img my auto mx-auto p-1"
+        style="height:300px;"
+        src="{{project.img_teaser}}">
+        {% endif %}
     </div>
+    <div class="col-lg-6 mx-auto my-auto">
+        <h3>Category: {{project.category}}</h3>
+        <h3>Title: {{project.title}}</h3>
+        <h6><i class="fas fa-code"></i> Languages: {{project.languages|join(', ')}}</h6>
+        <h6><i class="fas fa-tools"></i> Tools: {{project.tools|join(', ')}}</h6>
+        <p>
+            {{project.description}}
+            <a href="#"> Read more</a>
+        </p>
+        <hr>
+        {% if project.link != "" %}
+        <a href="{{project.link}}" target="_blank"><i class="fas fa-chevron-right"></i> Visit Live Site</a>
+        {% else %}
+        <p><i class="fas fa-times"></i> No Preview Available</p>
+        {% endif %}
+        <a href="{{url_for('show_recipe', project_id=project._id)}}"><i class="fas fa-chevron-right"></i> Read more</a>
+    </div>
+    <hr>
+</div>
+{% endfor %}
+
 </section>
 {% endblock body %}

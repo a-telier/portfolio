@@ -39,6 +39,17 @@ def work():
     return render_template("work.html",
     projects=mongo.db.projects.find())
 
+#   SHOW RECIPES
+@app.route('/work/<project_id>')
+def show_project(project_id):
+    project = mongo.db.projects.find_one({"_id": ObjectId(project_id)})
+    return render_template("project.html",
+    projects=mongo.db.projects.find())
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
 # RUN in production by using
 # flask run --host=0.0.0.0
 
