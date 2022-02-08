@@ -17,7 +17,7 @@
         justify-content: left;
         align-items: left;">
             <!-- Image -->
-            <img src="{{url_for('static', filename='img/4.jpg')}}" 
+            <img src="{{url_for('static', filename='img/lights.jpg')}}" 
             class="fixed-top"
             style="
             height: 100%;
@@ -26,20 +26,24 @@
             background-repeat: no-repeat;
             z-index: -1 !important;">
             <!-- Text -->
-            <div class="col-lg-6 col-sm-10 my-auto m-1 pb-5 
+            <div class="col-lg-6 col-sm-10 my-auto m-2 pb-6 
             text-white align-left
-            animate__animated animate__fadeInLeft">
-                <h6>Hi, I'am Alex!</h6>
-                <h2>Digital Marketeer</h2>
-                <h3>E-commerce Specialist</h3>
-                <h1>Weekend Programmer</h1>
+            animate__animated animate__fadeInLeft"
+            style="">
+                <h6 class="m-1 p-1">Hi, I'am Alex!</h6>
+                <div class="m-2 p-2">
+                    <h2>Digital Marketeer</h2>
+                    <h3>E-commerce Specialist</h3>
+                    <h1>Weekend Programmer</h1>
+                </div>
                 <hr>
-                <h6>
-                    Welcome to my portfolio site (we have been expecting you!)
-                    - here I display my weekend projects & other techy things in the future who knows.
-                </h6>
+                <div class="m-2 p-2">
+                <h6>Welcome to my portfolio site (we have been expecting you!)</h6>
+                <h6>- here I display my weekend projects & other techy things in the future who knows.</h6>
+                </div>
                 <div class="p-2">
-                    <a class="waves-effect waves-light transparent btn-large"><i class="material-icons right">cloud</i>Projects Gallery</a>
+                    <a class="waves-effect waves-light transparent btn-large link" href="{{ url_for('work')}}">
+                        <i class="material-icons right">cloud</i>Projects Gallery</a>
                 </div>
             </div>
         </div>
