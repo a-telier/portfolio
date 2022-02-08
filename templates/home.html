@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+<section class="container-fluid">
+    <div class="row p-3" style="">
+        <div class="col-md-6 col-sm-12 m-3 p-3 px-5 my-auto mx-auto"
+        style="">
+            <h1 class="my-auto mx-auto d-inline-block"
+            style="font-size:3em;">
+                Some text about what I do, etc, etc, etc.</h1>
+        </div>
+        <div class="col-md-6 col-sm-12 m-3 p-3 my-auto mx-auto"
+        style="position:relative;">
+            <img src="{{url_for('static', filename='img/mak-9KlX_t9-Tmc-unsplash.jpg')}}" 
+            class="responsive-img" alt="" style="height:500px;display:block;margin:auto">
+        </div>
+    </div>
+    <div class="animate_animated animate__rotateInDownLeft" style="border-top:solid;"></div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Projects</h1>
+            </div>
+        </div>
+        {% for project in projects %}
+        <div class="row">
+            <div class="col-md-6 col-sm-12 m-2 p-2">
+                <div class="col-12">
+                    {% if project.img_teaser != 0 %}
+                    <img class="responsive-img"
+                    src="{{project.img_teaser}}">
+                    {% endif %}
+                </div>
+                <div class="col-12 text-center">
+                    <h6 class="m-1 p-1">Category | {{project.category}}</h6>
+                    <h3 class="m-1 p-2">{{project.title}}</h3>
+                    <p class="m-1 p-1">
+                        {{project.description}}
+                        <!-- <a href="#"> Read more</a> -->
+                    </p>
+                    <h6 class="m-1 p-1 pt-3"><i class="fas fa-code"></i> Languages: {{project.languages|join(', ')}}</h6>
+                    <h6 class="m-1 p-1"><i class="fas fa-tools"></i> Tools: {{project.tools|join(', ')}}</h6>
+                </div>
+            </div>
+        </div>
+        <!-- <a href="{{url_for('show_project', project_id=project._id)}}"><i class="fas fa-chevron-right"></i> Read More Here </a> -->
+        <!-- {% if project.link != "" %}
+        <a href="{{project.link}}" target="_blank"><i class="fas fa-chevron-right"></i> Visit Live Site</a>
+        {% else %}
+        <p><i class="fas fa-times"></i> No Preview Available</p>
+        {% endif %} -->
+        {% endfor %}
+    </div>
+</section>
+{% endblock body %}

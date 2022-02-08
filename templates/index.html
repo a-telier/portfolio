@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block body %}
-    <section class="container-fluid fixed-top w-100" 
+    <!-- <section class="container-fluid fixed-top w-100" 
     style="
     height: 800px;
     z-index:-1;">
@@ -16,7 +16,6 @@
         display: flex;
         justify-content: left;
         align-items: left;">
-            <!-- Image -->
             <img src="{{url_for('static', filename='img/lights.jpg')}}" 
             class="fixed-top"
             style="
@@ -24,13 +23,16 @@
             width: 100%;
             background-size: cover;
             background-repeat: no-repeat;
-            z-index: -1 !important;">
-            <!-- Text -->
+            z-index: -1 !important;
+
+            animation-name: hero-zoom;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;">
             <div class="col-lg-6 col-sm-10 my-auto m-2 pb-6 
             text-white align-left
             animate__animated animate__fadeInLeft"
             style="">
-                <h6 class="m-1 p-1">Hi, I'am Alex!</h6>
+                <h6 class="m-2 p-2">Hi, I'am Alex!</h6>
                 <div class="m-2 p-2">
                     <h2>Digital Marketeer</h2>
                     <h3>E-commerce Specialist</h3>
@@ -39,13 +41,13 @@
                 <hr>
                 <div class="m-2 p-2">
                 <h6>Welcome to my portfolio site (we have been expecting you!)</h6>
-                <h6>- here I display my weekend projects & other techy things in the future who knows.</h6>
+                <h6>Here I display my weekend projects & other techy things in the future who knows.</h6>
                 </div>
-                <div class="p-2">
+                <div class="m-2 p-2">
                     <a class="waves-effect waves-light transparent btn-large link" href="{{ url_for('work')}}">
-                        <i class="material-icons right">cloud</i>Projects Gallery</a>
+                        <i class="fas fa-chevron-right"></i> Projects Gallery</a>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 {% endblock body %}
